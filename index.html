@@ -4,13 +4,13 @@
     <title>Meu Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="functionOnLoad()">
+<body >
     <nav>
         <ul>
-            <li class="lnk active"><a href="#section1">section1</a></li>
-            <li class="lnk"><a href="#section2">section2</a></li>
-            <li class="lnk"><a href="#section3">section3</a></li>
-            <li class="lnk"><a href="#section4">section4</a></li>
+            <li class="lnk selecionado"><a href="#section1" onclick="selMenu(0)">section1</a></li>
+            <li class="lnk"><a href="#section2" onclick="selMenu(1)">section2</a></li>
+            <li class="lnk"><a href="#section3" onclick="selMenu(2)">section3</a></li>
+            <li class="lnk"><a href="#section4" onclick="selMenu(3)">section4</a></li>
         </ul>
     </nav>
 	<br>
@@ -23,9 +23,6 @@
 	<p id="section3" class="format">
 	"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
 	<hr>
-	<!-- O <input type="submit"> define um botão para enviar os dados do formulário para um manipulador de formulário.
-	O manipulador de formulário normalmente é um arquivo no servidor (php) com um script para processar dados de entrada ou um serviço da API.
-	O manipulador de formulário é especificado no atributo action do formulário. Nesse caso só avisa que foi clicado  --> 
 	<form id="section4" class="format" action="javascript:functionEnvio()">
 	  <label for="fnome">Nome*:</label><br>
 	  <input type="text" id="fnome" name="fnome" required><br><br>
@@ -34,25 +31,19 @@
 	  <label for="fmes">Mensagem*:</label><br>
 	  <input type="text" id="fmes" name="fmes" size="100" required><br><br>
 	  <label for="fmes">Os campos com asterisco são obrigatorios</label><br><br>
-	  <input type="submit" value="Submit">
-	  <input type="reset" value="Reset">
+	  <input type="submit" value="Envio">
+	  <input type="reset" value="Limpar">
 	</form> 
 <script>
-function functionOnLoad() {
-	var lnks = document.getElementsByClassName("lnk");
-	for (var i = 0; i < lnks.length; i++) {
-	  lnks[i].addEventListener("click", selMenu);
+	function selMenu(num) {
+		var selAtivo = document.getElementsByClassName("selecionado");
+		selAtivo[0].className = selAtivo[0].className.replace(" selecionado", "");
+		var lnks = document.getElementsByClassName("lnk")
+		lnks[num].className += " selecionado";
 	}
-}
-function selMenu() {
-	  var selActive = document.getElementsByClassName("active");
-	  selActive[0].className = selActive[0].className.replace(" active", "");
-	  this.className += " active";
-}
-function functionEnvio() {
-	var nome = document.getElementById('fnome').value
-	alert('envio simulado')
-}
+	function functionEnvio() {
+		alert('envio simulado')
+	}
 </script>
 </body>
 </html>
