@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Meu Menu</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Portfólio pessoal (CV online)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
@@ -13,31 +15,51 @@
             <li class="lnk"><a href="#section4" onclick="selMenu(3)">section4</a></li>
         </ul>
     </nav>
-	<br>
 	<section id="section1">
-		<br>
+		<br><br><br>
+		<h1>Portfólio pessoal</h1>
+		<h3>Sobre mim</h3>
 		<p class="format">
 		"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
 		</p>
 		<hr>
 	</section>
 	<section id="section2">
-		<br>
+		<br><br><br>
+		<h3>Formação</h3>
 		<p class="format">
 		"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
 		</p>
 		<hr>
 	</section>
 	<section id="section3">
+		<br><br><br>
+		<h3>Portfólio</h3>
 		<br>
-		<p class="format">
-		"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-		</p>
+			<table>
+				<tr>
+					<th><label for="nome">Teste Tabela</label></th>
+					<td><button type="button" onclick="callPort(0)">Portfolio 1</button></td>
+				</tr>
+				<tr>
+					<th><label for="nome">Teste grid</label></th>
+					<td><button type="button" onclick="callPort(1)">Portfolio 2</button></td>
+				</tr>
+				<tr>
+					<th><label for="nome">Teste Display flex</label></th>
+					<td><button type="button" onclick="callPort(2)">Portfolio 3</button></td>
+				</tr>
+				<tr>
+					<th><label for="nome">Teste Display block</label></th>
+					<td><button type="button" onclick="callPort(3)">Portfolio 4</button></td>
+				</tr>
+			</table>
+		<br>
 		<hr>
 	</section>
 	<section id="section4">
 		<br><br><br>
-		<h2>Formulário</h2>
+		<h3>Contato</h3>
 		<form id="section4" class="format" action="javascript:functionEnvio()">
 			<table>
 				<tr>
@@ -61,15 +83,19 @@
 		<br><br><br><br><br><br>
 	</section>	
 <script>
-	function selMenu(num) {
-		var selAtivo = document.getElementsByClassName("selecionado");
-		selAtivo[0].className = selAtivo[0].className.replace(" selecionado", "");
-		var lnks = document.getElementsByClassName("lnk")
-		lnks[num].className += " selecionado";
-	}
-	function functionEnvio() {
-		alert('envio simulado')
-	}
+function selMenu(num) {
+	var selAtivo = document.getElementsByClassName("selecionado");
+	selAtivo[0].className = selAtivo[0].className.replace(" selecionado", "");
+	var lnks = document.getElementsByClassName("lnk")
+	lnks[num].className += " selecionado";
+}
+function functionEnvio() {
+	alert('envio simulado')
+}
+function callPort(num) {
+	const links = ["portfolio1.html", "portfolio2.html", "portfolio3.html", "portfolio4.html"];
+	window.open(links[num], "Portfolio", "left=120,top=120,width=1100,height=500");
+}
 </script>
 </body>
 </html>
