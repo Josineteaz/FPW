@@ -28,14 +28,18 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: lightblue;
+}
+
+th {
+  height: 70px;
 }
 
 .selecionado {
-  background-color: #111;
+  background-color: #154c79;
 }
 
 .format {
-	font-size: 35px;
+	font-size: 25px;
 	padding: 50px 20px 20px 20px;
 }
