@@ -1,0 +1,16 @@
+.container {
+display: grid;
+grid-template-rows: 60px 40px 200px 60px;
+grid-template-areas:
+"topo topo topo"
+"menu menu menu"
+"esquerda principal direita"
+"rodape rodape rodape";
+grid-gap: 5px 10px;
+}
+.topo {grid-area: topo;}
+.menu {grid-area: menu;}
+.principal {grid-area: principal;}
+.esquerda {grid-area: esquerda;}
+.direita {grid-area: direita;}
+.rodape {grid-area: rodape;}
