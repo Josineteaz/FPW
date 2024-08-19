@@ -33,6 +33,34 @@ li a:hover {
 
 th {
   height: 70px;
+  min-width: 280px;
+}
+
+button {
+  background-color: #154c79;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+input[type=submit], input[type=reset] {
+  background-color: #154c79;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type=submit]:hover , input[type=reset]:hover {
+  background-color: lightblue;
 }
 
 .selecionado {
@@ -40,6 +68,6 @@ th {
 }
 
 .format {
-	font-size: 25px;
-	padding: 50px 20px 20px 20px;
+	font-size: 20px;
+	padding: 10px 30px 30px 30px;
 }
