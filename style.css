@@ -1,22 +1,46 @@
 /*Cor de fundo da página*/
 html {
-	background-color: #D6EAF8;
+	background-color:#FFFAFA;
 }
-/*Configuração do Menu*/
+
+/*Estilização do título*/
+.titulo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 100%;
+	margin: 0;
+	background-color: #2d5353;
+	text-align: center;
+	padding: 5px;
+	font-size: 50px;
+	font-family:'Garamond';
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Estilização do menu*/
 ul {
-  list-style-type: none;
-  top: 50px;
-  left:0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #00a6d5;
-  position: fixed;
-  box-shadow: 0 4px 8px 0 rgba(10, 55, 220, 0.5);
-  font-size: 20px;
-  display: flex;
-  justify-content: space-around;	
+	list-style-type: none;
+	position: fixed;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #2d5353;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+}
+*/
+
+li {
+	float:left;
 }
 
 li a {
@@ -26,62 +50,74 @@ li a {
 	text-align: center;
 	padding: 16px 18px;
 }
-/*Configuração para quando o mouse passar sobre as opções do Menu*/
+
+/*Estilização de quando o mouse passa sobre as opções do menu*/
 li a:hover {
-  background-color: lightblue;
+	background-color: #009999;
 }
-/*Configuração para o Menu selecionado*/
+
+/*Estilização do menu selecionado*/
 .selecionado {
-  background-color: #154c79;
+	font-style: oblique;
+	text-decoration: underline;
+	text-decoration-color: white;
+	text-decoration-style: bold;
 }
-/*Configuração do texto das Seções Sobre Mim e Formação*/
-.format {
+
+/*Estilização do elemento h3*/
+h3{
+	font-size: 20;
+	text-decoration:solid;
+	color: #ccad00;
+}
+
+/*Estilização da classe texto*/
+.texto {
 	font-size: 20px;
-	padding: 10px 30px 30px 30px;
+	font-family: 'Verdana';
+	text-align: justify;
+	padding: 10px 100px;
 }
-/*Configuração do título de cada Portfólio*/
+
+/*Estilização do conteúdo de th*/
 th {
-  height: 70px;
-  min-width: 280px;
+	height: 70px;
+	/*min-width: 280px;*/
+	font-size: 16px;
+	font-family: 'Verdana';
+	text-align: justify;
+	padding: 10px 100px;
 }
 
-/*Configuração do Botão*/
+/*Estilização dos botões*/
 button {
-  background-color: #154c79;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 8px;
-  font-size: 16px;
-}
-/*Configuração para quando o mouse passar sobre o Botão*/
-button:hover {
-  background-color: lightblue;
-}
-/*Configuração para os Botões Enviar e Limpar*/
-input[type=submit], input[type=reset] {
-  background-color: #154c79;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-/*Configuração para quando o mouse passar sobre os Botões Enviar e Limpar*/
-input[type=submit]:hover , input[type=reset]:hover {
-  background-color: lightblue;
+	background-color: #154c79;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 8px;
+	font-size: 16px;
+	font-family: 'Verdana';
 }
 
-.titlefix {
-	position: fixed;
-	top:0;
-	left: 0;
-	width: 100%;
-	margin: 0;
-	background-color: #00a6d5;
-	font-size: 35px;
+/*Estilização de quando o mouse passa sobre os botões*/
+button:hover {
+	background-color: lightblue;
+}
+
+/*Estilização dos botões Enviar e Limpar*/
+input[type=submit], input[type=reset] {
+	background-color: #154c79;
 	color: white;
+	padding: 10px 20px;
 	text-align: center;
-	padding: 5px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Verdana';
+	}
+
+/*Estilização de quando o mouse passa sobre os botões Enviar e Limpar*/
+input[type=submit]:hover , input[type=reset]:hover {
+	background-color: lightblue;
 }
