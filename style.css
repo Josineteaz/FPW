@@ -15,9 +15,7 @@ ul {
   box-shadow: 0 4px 8px 0 rgba(10, 55, 220, 0.5);
   font-size: 20px;
 }
-li {
-  float:left;
-}
+
 li a {
 	text-decoration: none;
 	display: block;
