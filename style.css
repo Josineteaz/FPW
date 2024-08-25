@@ -71,3 +71,16 @@ input[type=submit], input[type=reset] {
 input[type=submit]:hover , input[type=reset]:hover {
   background-color: lightblue;
 }
+
+.titlefix {
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	background-color: #00a6d5;
+	font-size: 35px;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
