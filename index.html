@@ -7,24 +7,26 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body >
-	<h1 class="titlefix">Mio nome</h1>
+	<!-- Título -->
+	<h1 class="titulo">Josinete Zucolotto</h1>
 	<!-- Menu -->
     <nav>
         <ul>
-            <li class="opcaoMenu selecionado"><a href="#section1" onclick="selMenu(0)">SOBRE MIM</a></li>
-            <li class="opcaoMenu"><a href="#section2" onclick="selMenu(1)">FORMAÇÃO</a></li>
-            <li class="opcaoMenu"><a href="#section3" onclick="selMenu(2)">PORTFÓLIO</a></li>
-            <li class="opcaoMenu"><a href="#section4" onclick="selMenu(3)">CONTATO</a></li>
+			<!-- Lista de Opções do Menu com seus respectivos links -->
+            <li class="opcaoMenu selecionado"><a href="#secao1" onclick="selMenu(0)">SOBRE MIM</a></li>
+            <li class="opcaoMenu"><a href="#secao2" onclick="selMenu(1)">FORMAÇÃO</a></li>
+            <li class="opcaoMenu"><a href="#secao3" onclick="selMenu(2)">PORTFÓLIO</a></li>
+            <li class="opcaoMenu"><a href="#secao4" onclick="selMenu(3)">CONTATO</a></li>
         </ul>
     </nav>
-	<!-- Sessão Sobre Mim -->
-	<section id="section1">
-		<br><br><br>
-		<h1>Portfólio Pessoal</h1>
-		<br>
-		<h3>Sobre mim</h3>
-		<p class="format">
-			Olá, meu nome é Josinete Zucolotto, sou Analista de Negócios de TI.
+	<!-- Seção: Sobre Mim -->
+	<section id="secao1">
+		<br><br><br><br><br><br><br><br>
+		<h3>SOBRE MIM</h3>
+		<p class="texto">
+			Olá, sou Josinete!
+			<br><br>
+			Amante da natureza, praticante de esportes ao ar livre, estudante e profissionalmente desempenho a função de Analista de Negócios de TI.
 			<br><br>
 			Atualmente trabalho em uma empresa de tecnologia com foco em otimização e simulação de processos industriais, abrangendo as áreas de Mineração, Siderurgia, Cimento, Fertilizantes, Papel/Celulose, Energia/Gás, Alimentícia e no setor Petroquímico.
 			<br><br>
@@ -34,11 +36,11 @@
 		</p>
 		<hr>
 	</section>
-	<!-- Sessão Formação -->
-	<section id="section2">
-		<br><br><br>
-		<h3>Formação Acadêmica</h3>
-		<p class="format">
+	<!-- Seção: Formação -->
+	<section id="secao2">
+		<br><br><br><br><br><br><br><br>
+		<h3>FORMAÇÃO ACADÊMICA</h3>
+		<p class="texto">
 			Tecnólogo em Análise e Desenvolvimento de Sistemas
 			<br>
 			UNINTER - Centro Universitário Internacional - Cursando
@@ -51,56 +53,64 @@
 			<br>
 			Faculdade Pitágoras - 2007
 		</p>		
-		<h3>Idiomas</h3>		
-		<p class="format">
+		<h3>IDIOMAS</h3>		
+		<p class="texto">
 			Português: Nativo
 			<br>
 			Inglês: Básico
 		</p>		
+		<h3>CURSOS</h3>
+		<p class="texto">
+			Introduction to Developing with the PI System
+			<br>
+			O Básico do PI System
+			<br>
+			PI System Learning
+			<br><br>
+			Gestão Ágil com Scrum
+			<br>
+			UDEMY - Instrutor Gustavo Farias
+		</p>	
 		<hr>
 	</section>
-	<!-- Sessão Portfólio -->
-	<section id="section3">
-		<br><br><br>
-		<h3>Portfólio</h3>
-		<br>
-			<table>
-				<tr>
-					<th><label for="nome">Teste Tabela</label></th>
-					<td><button type="button" onclick="callPort(0)">Portfolio 1</button></td>
-				</tr>
-				<tr>
-					<th><label for="nome">Teste grid</label></th>
-					<td><button type="button" onclick="callPort(1)">Portfolio 2</button></td>
-				</tr>
-				<tr>
-					<th><label for="nome">Teste Display flex</label></th>
-					<td><button type="button" onclick="callPort(2)">Portfolio 3</button></td>
-				</tr>
-				<tr>
-					<th><label for="nome">Teste Display block</label></th>
-					<td><button type="button" onclick="callPort(3)">Portfolio 4</button></td>
-				</tr>
-				<tr>
-					<th><label for="nome">Teste Elemento de Grid</label></th>
-					<td><button type="button" onclick="callPort(4)">Portfolio 5</button></td>
-				</tr>
-			</table>
+	<!-- Seção: Portfólio -->
+	<section id="secao3">
+		<br><br><br><br><br><br><br><br>
+		<h3>PORTFÓLIO</h3>
+		<p class="texto">
+			No aprendizado da discipla Fundamentos de Desenvolvimento Web foram implementadas diversas atividades de fixação de conteúdo, abaixo segue link de algumas delas.
+		</p>
+		<table>
+			<!-- Identificação das Atividades desenvolvidas e seus respectivos botões -->
+			<tr>
+				<th><label for="nome">Atividade 1: Estrutura de tabela</label></th>
+				<td><button type="button" onclick="linkAtividade(0)">Link Atividade 1</button></td>
+			</tr>
+			<tr>
+				<th><label for="nome">Atividade 2: Utilização do Position</label></th>
+				<td><button type="button" onclick="linkAtividade(1)">Link Atividade 2</button></td>
+			</tr>
+			<tr>
+				<th><label for="nome">Atividade 3: Elementos de grid</label></th>
+				<td><button type="button" onclick="linkAtividade(2)">Link Atividade 3</button></td>
+			</tr>
+		</table>
 		<br>
 		<hr>
 	</section>
-	<!-- Sessão Contato -->
-	<section id="section4">
-		<br><br><br>
-		<h3>Contato</h3>
-		<form id="section4" class="format" action="javascript:functionEnvio()">
+	<!-- Seção: Contato -->
+	<section id="secao4">
+		<br><br><br><br><br><br><br><br>
+		<h3>CONTATO</h3>
+		<!-- Formulário para preenchimento dos campos Nome, E-mail e Mensagem -->
+		<form id="secao4" class="format" action="javascript:functionEnvio()">
 			<table>
 				<tr>
 					<th><label for="nome">Nome:</label></th>
 					<td><input type="text" id="fnome" name="fnome" size="60" required></td>
 				</tr>
 				<tr>
-					<th><label for="femail">Email:</label></th>
+					<th><label for="femail">E-mail:</label></th>
 					<td><input type="email" id="femail" name="femail" size="60" required></td>
 				</tr>
 				<tr>
@@ -116,23 +126,25 @@
 		<br><br><br><br><br><br>
 	</section>	
 <script>
-	/*Função responsável pela alteração de cor do menu em seleção - Serve para o CSS*/
+	/*Função responsável pela alteração do nome da classe da Opção do Menu. Isso possibilita estilizar de forma diferente o menu quando selecionado*/
 	function selMenu(i) {
-		/*Declaração variável selAtivo que  é array*/
-		var selAtivo = document.getElementsByClassName("selecionado");
-		selAtivo[0].className = selAtivo[0].className.replace(" selecionado", "");
-		/*Declaração de variável */
+		/*Declaração e atribuição da variável selAtiva, valorizada com a lista dos elementos que possuem o nome da classe 'selecionado'*/
+		var selAtiva = document.getElementsByClassName("selecionado");
+		/*Remove a string ' selecionado', alterando consequentemente o nome da classe, sinalizando que a opção do menu não está mais selecionada*/
+		selAtiva[0].className = selAtiva[0].className.replace(" selecionado", "");
+		/*Declaração e atribuição da variável opcaoMenus, valorizada com a lista dos elementos que possuem o nome da classe 'opcaoMenu'*/
 		var opcaoMenus = document.getElementsByClassName("opcaoMenu")
+		/*Atribui a string ' selecionado' ao nome da classe, sinalizando que a opção do menu clicada pelo usuário é a atual seleção*/
 		opcaoMenus[i].className += " selecionado";
 	}
-	/*Função responsável em avisar o usuário sobre o envio do Contato*/
+	/*Função responsável em notificar o usuário sobre o envio do Contato*/
 	function functionEnvio() {
 		alert('Enviado com sucesso!')
 	}
-	/**/
-	function callPort(num) {
-		const links = ["portfolio1.html", "portfolio2.html", "portfolio3.html", "portfolio4.html", "portfolio5.html"];
-		window.open(links[num], "Portfolio", "left=120,top=120,width=1100,height=500");
+	/*Função responsável por chamar o link, tendo como base o botão que foi clicado*/
+	function linkAtividade(i) {
+		const links = ["atividade1.html", "atividade2.html", "atividade3.html"];
+		window.open(links[i], "Atividade", "left=120,top=120,width=1100,height=500");
 	}
 </script>
 </body>
