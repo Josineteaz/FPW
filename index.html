@@ -3,35 +3,62 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initialscale=1.0">
-    <title>Portfólio pessoal (CV online)</title>
-    <link rel="stylesheet" href="style.css">
+	<title>Portfólio Pessoal (CV online)</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body >
+	<!-- Menu -->
     <nav>
         <ul>
-            <li class="lnk selecionado"><a href="#section1" onclick="selMenu(0)">Sobre mim</a></li>
-            <li class="lnk"><a href="#section2" onclick="selMenu(1)">Formação</a></li>
-            <li class="lnk"><a href="#section3" onclick="selMenu(2)">Portfólio</a></li>
-            <li class="lnk"><a href="#section4" onclick="selMenu(3)">Contato</a></li>
+            <li class="opcaoMenu selecionado"><a href="#section1" onclick="selMenu(0)">SOBRE MIM</a></li>
+            <li class="opcaoMenu"><a href="#section2" onclick="selMenu(1)">FORMAÇÃO</a></li>
+            <li class="opcaoMenu"><a href="#section3" onclick="selMenu(2)">PORTFÓLIO</a></li>
+            <li class="opcaoMenu"><a href="#section4" onclick="selMenu(3)">CONTATO</a></li>
         </ul>
     </nav>
+	<!-- Sessão Sobre Mim -->
 	<section id="section1">
 		<br><br><br>
-		<h1>Portfólio pessoal</h1>
+		<h1>Portfólio Pessoal</h1>
+		<br>
 		<h3>Sobre mim</h3>
 		<p class="format">
-		"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+			Olá, meu nome é Josinete Zucolotto, sou Analista de Negócios de TI.
+			<br><br>
+			Atualmente trabalho em uma empresa de tecnologia com foco em otimização e simulação de processos industriais, abrangendo as áreas de Mineração, Siderurgia, Cimento, Fertilizantes, Papel/Celulose, Energia/Gás, Alimentícia e no setor Petroquímico.
+			<br><br>
+			Meu trabalho consiste em dialogar com as partes interessadas visando compreender e mapear suas necessidades. Além disso, também especifico a solução e contribuio com o planejamento e gestão da implementação do projeto.
+			<br><br>
+			Meu foco é ser um facilitador para o sucesso do projeto, estabelecendo a comunicação entre o cliente e a equipe de desenvolvimento, de forma que a solução, utilizando recursos tecnológicos eficientes, esteja alinhada com os objetivos da organização e que aprimore os seus processos industriais.
 		</p>
 		<hr>
 	</section>
+	<!-- Sessão Formação -->
 	<section id="section2">
 		<br><br><br>
-		<h3>Formação</h3>
+		<h3>Formação Acadêmica</h3>
 		<p class="format">
-		"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-		</p>
+			Tecnólogo em Análise e Desenvolvimento de Sistemas
+			<br>
+			UNINTER - Centro Universitário Internacional - Cursando
+			<br><br>
+			MBA em Accountability, Governabilidade e Governança Pública
+			<br>
+			UNINTER - Centro Universitário Internacional - 2020
+			<br><br>
+			Bacharelado em Ciências Contábeis
+			<br>
+			Faculdade Pitágoras - 2007
+		</p>		
+		<h3>Idiomas</h3>		
+		<p class="format">
+			Português: Nativo
+			<br>
+			Inglês: Básico
+		</p>		
 		<hr>
 	</section>
+	<!-- Sessão Portfólio -->
 	<section id="section3">
 		<br><br><br>
 		<h3>Portfólio</h3>
@@ -61,6 +88,7 @@
 		<br>
 		<hr>
 	</section>
+	<!-- Sessão Contato -->
 	<section id="section4">
 		<br><br><br>
 		<h3>Contato</h3>
@@ -87,19 +115,24 @@
 		<br><br><br><br><br><br>
 	</section>	
 <script>
-function selMenu(num) {
-	var selAtivo = document.getElementsByClassName("selecionado");
-	selAtivo[0].className = selAtivo[0].className.replace(" selecionado", "");
-	var lnks = document.getElementsByClassName("lnk")
-	lnks[num].className += " selecionado";
-}
-function functionEnvio() {
-	alert('envio simulado')
-}
-function callPort(num) {
-	const links = ["portfolio1.html", "portfolio2.html", "portfolio3.html", "portfolio4.html", "portfolio5.html"];
-	window.open(links[num], "Portfolio", "left=120,top=120,width=1100,height=500");
-}
+	/*Função responsável pela alteração de cor do menu em seleção - Serve para o CSS*/
+	function selMenu(i) {
+		/*Declaração variável selAtivo que  é array*/
+		var selAtivo = document.getElementsByClassName("selecionado");
+		selAtivo[0].className = selAtivo[0].className.replace(" selecionado", "");
+		/*Declaração de variável */
+		var opcaoMenus = document.getElementsByClassName("opcaoMenu")
+		opcaoMenus[i].className += " selecionado";
+	}
+	/*Função responsável em avisar o usuário sobre o envio do Contato*/
+	function functionEnvio() {
+		alert('Enviado com sucesso!')
+	}
+	/**/
+	function callPort(num) {
+		const links = ["portfolio1.html", "portfolio2.html", "portfolio3.html", "portfolio4.html", "portfolio5.html"];
+		window.open(links[num], "Portfolio", "left=120,top=120,width=1100,height=500");
+	}
 </script>
 </body>
 </html>
