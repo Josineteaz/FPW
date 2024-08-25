@@ -5,7 +5,8 @@ html {
 /*Configuração do Menu*/
 ul {
   list-style-type: none;
-  top: 0;
+  top: 50px;
+  left:0;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -14,6 +15,8 @@ ul {
   position: fixed;
   box-shadow: 0 4px 8px 0 rgba(10, 55, 220, 0.5);
   font-size: 20px;
+  display: flex;
+  justify-content: space-around;	
 }
 
 li a {
