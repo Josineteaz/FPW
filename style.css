@@ -1,7 +1,8 @@
+/*Cor de fundo da página*/
 html {
 	background-color: #D6EAF8;
 }
-
+/*Configuração do Menu*/
 ul {
   list-style-type: none;
   top: 0;
@@ -14,11 +15,9 @@ ul {
   box-shadow: 0 4px 8px 0 rgba(10, 55, 220, 0.5);
   font-size: 20px;
 }
-
 li {
-  float: left;
+  float:left;
 }
-
 li a {
 	text-decoration: none;
 	display: block;
@@ -26,16 +25,26 @@ li a {
 	text-align: center;
 	padding: 16px 18px;
 }
-
+/*Configuração para quando o mouse passar sobre as opções do Menu*/
 li a:hover {
   background-color: lightblue;
 }
-
+/*Configuração para o Menu selecionado*/
+.selecionado {
+  background-color: #154c79;
+}
+/*Configuração do texto das Seções Sobre Mim e Formação*/
+.format {
+	font-size: 20px;
+	padding: 10px 30px 30px 30px;
+}
+/*Configuração do título de cada Portfólio*/
 th {
   height: 70px;
   min-width: 280px;
 }
 
+/*Configuração do Botão*/
 button {
   background-color: #154c79;
   color: white;
@@ -44,11 +53,11 @@ button {
   border-radius: 8px;
   font-size: 16px;
 }
-
+/*Configuração para quando o mouse passar sobre o Botão*/
 button:hover {
   background-color: lightblue;
 }
-
+/*Configuração para os Botões Enviar e Limpar*/
 input[type=submit], input[type=reset] {
   background-color: #154c79;
   color: white;
@@ -58,16 +67,7 @@ input[type=submit], input[type=reset] {
   cursor: pointer;
   font-size: 16px;
 }
-
+/*Configuração para quando o mouse passar sobre os Botões Enviar e Limpar*/
 input[type=submit]:hover , input[type=reset]:hover {
   background-color: lightblue;
-}
-
-.selecionado {
-  background-color: #154c79;
-}
-
-.format {
-	font-size: 20px;
-	padding: 10px 30px 30px 30px;
 }
