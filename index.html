@@ -3,16 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initialscale=1.0">
+	<!--Título da página-->
 	<title>Portfólio Pessoal (CV online)</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body >
-	<!-- Título -->
+	<!--Título-->
 	<h1 class="titulo">Josinete Zucolotto</h1>
-	<!-- Menu -->
+	<!--Elemento para o Menu-->
     <nav>
+		<!--Elemento de lista não ordenada para as opções do Menu -->
         <ul>
-			<!-- Lista de Opções do Menu com seus respectivos links -->
+			<!--Lista de opções do menu com seus respectivos links e com o evento onclick que executa a função selMenu quando o usuário clica no item do menu-->
             <li class="opcaoMenu selecionado"><a href="#secao1" onclick="selMenu(0)">SOBRE MIM</a></li>
             <li class="opcaoMenu"><a href="#secao2" onclick="selMenu(1)">FORMAÇÃO</a></li>
             <li class="opcaoMenu"><a href="#secao3" onclick="selMenu(2)">PORTFÓLIO</a></li>
@@ -34,6 +36,7 @@
 			<br><br>
 			Meu foco é ser um facilitador para o sucesso do projeto, estabelecendo a comunicação entre o cliente e a equipe de desenvolvimento, de forma que a solução, utilizando recursos tecnológicos eficientes, esteja alinhada com os objetivos da organização e que aprimore os seus processos industriais.
 		</p>
+		<br><br><br><br><br><br><br><br>
 		<hr>
 	</section>
 	<!-- Seção: Formação -->
@@ -70,7 +73,8 @@
 			Gestão Ágil com Scrum
 			<br>
 			UDEMY - Instrutor Gustavo Farias
-		</p>	
+		</p>
+		<br><br><br><br><br><br><br><br>	
 		<hr>
 	</section>
 	<!-- Seção: Portfólio -->
@@ -80,30 +84,30 @@
 		<p class="texto">
 			No aprendizado da discipla Fundamentos de Desenvolvimento Web foram implementadas diversas atividades de fixação de conteúdo, abaixo segue link de algumas delas.
 		</p>
+		<!--Estrutura de tabela para organizar as atividades e seus respectivos botões-->
 		<table>
-			<!-- Identificação das Atividades desenvolvidas e seus respectivos botões -->
 			<tr>
 				<th><label for="nome">Atividade 1: Estrutura de tabela</label></th>
-				<td><button type="button" onclick="linkAtividade(0)">Link Atividade 1</button></td>
+				<td><button type="button" onclick="linkPag(0)">Link Atividade 1</button></td>
 			</tr>
 			<tr>
 				<th><label for="nome">Atividade 2: Utilização do Position</label></th>
-				<td><button type="button" onclick="linkAtividade(1)">Link Atividade 2</button></td>
+				<td><button type="button" onclick="linkPag(1)">Link Atividade 2</button></td>
 			</tr>
 			<tr>
 				<th><label for="nome">Atividade 3: Elementos de grid</label></th>
-				<td><button type="button" onclick="linkAtividade(2)">Link Atividade 3</button></td>
+				<td><button type="button" onclick="linkPag(2)">Link Atividade 3</button></td>
 			</tr>
 		</table>
-		<br>
+		<br><br><br><br><br><br><br><br>
 		<hr>
 	</section>
 	<!-- Seção: Contato -->
 	<section id="secao4">
 		<br><br><br><br><br><br><br><br>
 		<h3>CONTATO</h3>
-		<!-- Formulário para preenchimento dos campos Nome, E-mail e Mensagem -->
-		<form id="secao4" class="format" action="javascript:functionEnvio()">
+		<!-- Formulário para preenchimento e envio dos dados dos campos Nome, E-mail e Mensagem -->
+		<form id="secao4" class="format" action="javascript:funEnvio()">
 			<table>
 				<tr>
 					<th><label for="nome">Nome:</label></th>
@@ -123,7 +127,8 @@
 				</tr>
 			</table>
 		</form>
-		<br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br>
+		<hr>
 	</section>	
 <script>
 	/*Função responsável pela alteração do nome da classe da Opção do Menu. Isso possibilita estilizar de forma diferente o menu quando selecionado*/
@@ -138,11 +143,11 @@
 		opcaoMenus[i].className += " selecionado";
 	}
 	/*Função responsável em notificar o usuário sobre o envio do Contato*/
-	function functionEnvio() {
+	function funEnvio() {
 		alert('Enviado com sucesso!')
 	}
-	/*Função responsável por chamar o link, tendo como base o botão que foi clicado*/
-	function linkAtividade(i) {
+	/*Função responsável por chamar o link, tendo como base o botão que foi clicado, abre uma nova página com tamanho pré-definido*/
+	function linkPag(i) {
 		const links = ["atividade1.html", "atividade2.html", "atividade3.html"];
 		window.open(links[i], "Atividade", "left=120,top=120,width=1100,height=500");
 	}
