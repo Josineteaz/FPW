@@ -15,14 +15,14 @@
 		<!--Elemento de lista não ordenada para as opções do Menu -->
         <ul>
 			<!--Lista de opções do menu com seus respectivos links e com o evento onclick que executa a função selMenu quando o usuário clica no item do menu-->
-            <li class="opcaoMenu selecionado"><a href="#secao1" onclick="selMenu(0)">SOBRE MIM</a></li>
-            <li class="opcaoMenu"><a href="#secao2" onclick="selMenu(1)">FORMAÇÃO</a></li>
-            <li class="opcaoMenu"><a href="#secao3" onclick="selMenu(2)">PORTFÓLIO</a></li>
-            <li class="opcaoMenu"><a href="#secao4" onclick="selMenu(3)">CONTATO</a></li>
+            <li class="opcaoMenu selecionado"><a href="#sobreMim" onclick="selMenu(0)">SOBRE MIM</a></li>
+            <li class="opcaoMenu"><a href="#formacao" onclick="selMenu(1)">FORMAÇÃO</a></li>
+            <li class="opcaoMenu"><a href="#portfolio" onclick="selMenu(2)">PORTFÓLIO</a></li>
+            <li class="opcaoMenu"><a href="#contato" onclick="selMenu(3)">CONTATO</a></li>
         </ul>
     </nav>
 	<!-- Seção: Sobre Mim -->
-	<section id="secao1">
+	<section id="sobreMim">
 		<br><br><br><br><br><br><br><br>
 		<h3>SOBRE MIM</h3>
 		<p class="texto">
@@ -40,7 +40,7 @@
 		<hr>
 	</section>
 	<!-- Seção: Formação -->
-	<section id="secao2">
+	<section id="formacao">
 		<br><br><br><br><br><br><br><br>
 		<h3>FORMAÇÃO ACADÊMICA</h3>
 		<p class="texto">
@@ -78,7 +78,7 @@
 		<hr>
 	</section>
 	<!-- Seção: Portfólio -->
-	<section id="secao3">
+	<section id="portfolio">
 		<br><br><br><br><br><br><br><br>
 		<h3>PORTFÓLIO</h3>
 		<p class="texto">
@@ -87,7 +87,7 @@
 		<!--Estrutura de tabela para organizar as atividades e seus respectivos botões-->
 		<table>
 			<tr>
-				<th><label for="nome">Atividade 1: Estrutura de tabela</label></th>
+				<th><label for="nome">Atividade 1: Praticando Formulário</label></th>
 				<td><button type="button" onclick="linkPag(0)">Link Atividade 1</button></td>
 			</tr>
 			<tr>
@@ -95,34 +95,38 @@
 				<td><button type="button" onclick="linkPag(1)">Link Atividade 2</button></td>
 			</tr>
 			<tr>
-				<th><label for="nome">Atividade 3: Elementos de grid</label></th>
+				<th><label for="nome">Atividade 3: Elementos de Grid</label></th>
 				<td><button type="button" onclick="linkPag(2)">Link Atividade 3</button></td>
+			</tr>
+			<tr>
+				<th><label for="nome">Atividade 4: Testando Estrutura de Tabela</label></th>
+				<td><button type="button" onclick="linkPag(3)">Link Atividade 4</button></td>
 			</tr>
 		</table>
 		<br><br><br><br><br><br><br><br>
 		<hr>
 	</section>
 	<!-- Seção: Contato -->
-	<section id="secao4">
+	<section id="contato">
 		<br><br><br><br><br><br><br><br>
 		<h3>CONTATO</h3>
 		<!-- Formulário para preenchimento e envio dos dados dos campos Nome, E-mail e Mensagem -->
-		<form id="secao4" class="format" action="javascript:funEnvio()">
+		<form id="contato" class="format" action="javascript:funEnvio()">
 			<table>
 				<tr>
 					<th><label for="nome">Nome:</label></th>
-					<td><input type="text" id="fnome" name="fnome" size="60" required></td>
+					<td><input type="text" id="nome" name="nome" size="80" required></td>
 				</tr>
 				<tr>
-					<th><label for="femail">E-mail:</label></th>
-					<td><input type="email" id="femail" name="femail" size="60" required></td>
+					<th><label for="email">E-mail:</label></th>
+					<td><input type="email" id="email" name="email" size="80" required></td>
 				</tr>
 				<tr>
-					<th><label for="fmsg">Mensagem:</label></th> 
-					<td><textarea name="fmsg" rows="4" cols="80" id="fmsg" required></textarea></td>
+					<th><label for="msg">Mensagem:</label></th> 
+					<td><textarea id="msg" name="msg" rows="8" cols="80" required></textarea></td>
 				</tr>
 				<tr>
-					<th><input type="submit" value="Envio"></th>
+					<th><input type="submit" value="Enviar"></th>
 					<td><input type="reset" value="Limpar"></td>
 				</tr>
 			</table>
@@ -148,7 +152,7 @@
 	}
 	/*Função responsável por chamar o link, tendo como base o botão que foi clicado, abre uma nova página com tamanho pré-definido*/
 	function linkPag(i) {
-		const links = ["atividade1.html", "atividade2.html", "atividade3.html"];
+		const links = ["atividade1.html", "atividade2.html", "atividade3.html", "atividade4.html"];
 		window.open(links[i], "Atividade", "left=120,top=120,width=1100,height=500");
 	}
 </script>
