@@ -2,29 +2,54 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initialscale=1.0">
-    <title>Atividade 1: Tabela</title>
-    <link rel="stylesheet" href="atividade1.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Praticando Formulário</title>
 </head>
-<body >
-	<br>
-	<h3>Teste Tabela</h3>
-	<table border="1px">
-		<tr>
-			<th><label>Descrição 1</label></th>
-			<td><input type="text" name="col2"></td>
-			<td><input type="text" name="col3"></td>
-		</tr>
-		<tr>
-			<th><label>Descrição 2</label></th>
-			<td><input type="text" name="col2"></td>
-			<td><input type="text" name="col3"></td>
-		</tr>
-		<tr>
-			<th><label>Descrição 3</label></th>
-			<td><input type="text" name="col2"></td>
-			<td><input type="text" name="col3"></td>
-		</tr>
-	</table>
+<body>
+	<form action="">
+		<fieldset>
+			<h1>Pesquisa sobre a prática de Atividade Física</h1>
+			<label for="nome">Nome:</label>
+			<br>
+			<input type="text" name="nome" value="Digite seu nome" size="80" maxlength="80">
+			<br><br>
+			<label for="idade">Idade:</label>
+			<br>
+			<input type="radio" name="faixa" value="faixa1"> -18 anos
+			<br>
+			<input type="radio" name="faixa" value="faixa2"> 18 a 35 anos
+			<br>
+			<input type="radio" name="faixa" value="faixa3"> 36 a 60 anos
+			<br>
+			<input type="radio" name="faixa" value="faixa4"> +60 anos			
+			<br><br>
+			<label for="atividade">Como você se exercita?</label>
+			<br>
+			<input type="checkbox" name="atividade[]" value="Bicicleta"> Bicicleta
+			<br>
+			<input type="checkbox" name="atividade[]" value="Caminhada"> Caminhada
+			<br>
+			<input type="checkbox" name="atividade[]" value="Corrida"> Corrida
+			<br>
+			<input type="checkbox" name="atividade[]" value="Dança"> Dança
+			<br>
+			<input type="checkbox" name="atividade[]" value="Musculação"> Musculação
+			<br>
+			<input type="checkbox" name="atividade[]" value="Natação"> Natação
+			<br>
+			<input type="checkbox" name="atividade[]" value="Pilates"> Pilates
+			<br>
+			<input type="checkbox" name="atividade[]" value="Yoga"> Yoga
+			<br>
+			<input type="checkbox" name="atividade[]" value="Nao"> Não Pratica
+			<br><br>
+			<label for="mensagem">Mensagem:</label>
+			<br>
+			<textarea name="mensagem" rows="10" cols="80">Compartilhe sua experiência...</textarea>
+			<br><br>
+			<input type="submit" value="Enviar">
+		</fieldset>
+	</form>
 </body>
 </html>
